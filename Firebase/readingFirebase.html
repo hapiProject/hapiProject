@@ -31,8 +31,6 @@
 	<button id="patientChange1" value="0001" onClick="personChange('0001');"> 0001 </button>
 	<button id="patientChange2" value="0002" onClick="personChange('0002');"> 0002 </button>
 	<button id="patientChange3" value="0003" onClick="personChange('0003');"> 0003 </button>
-	
-
 
 
 <br><br><br><br><br>
@@ -57,6 +55,10 @@
 	</table>
 
 
+
+
+
+
 	
 <button id="dayChange1" value="Day1" onClick="dayChange('Day1');"> Day1 </button>
 	
@@ -64,7 +66,15 @@
 <button id="dayChange3" value="Day3" onClick="dayChange('Day3');"> Day3 </button>
 
 
+<br><br><br><br><br>
 
+
+<form id="form">
+	new Record: <br>
+	Breath:<input type="text" contenteditable="true" id="breath">
+	Pain:<input type="text" contenteditable="true" id="pain">
+	<button type="button" onClick="send();">Submit </button>
+</form>
 
 	<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
 

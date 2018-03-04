@@ -90,3 +90,16 @@ function dayChange(userSpecDay) {
 
   }
 
+  function send (){
+    var rootRefRec = firebase.database().ref().child('Patients').child(userinput).child('Records').child('Day1');
+
+    var breathForm = document.getElementById('breath');
+    var painForm = document.getElementById('pain');
+    var updateBreath = breathForm.value;
+    var updatePain = painForm.value;
+
+  
+    rootRefRec.push().set(messageBreath,updatePain);
+
+  }
+
