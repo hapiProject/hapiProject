@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+
+    <header><h1> Reading Records </h1></header>
+
+    <table id="familyTable"> 
+        <tr> 
+            <td> ID : </td>
+            <td> NAME: </td>
+            <td> ADDRESS: </td>
+            <td> BLOOD:  </td>
+            <td> CONDITION: </td>
+
+        </tr>
+        <tr>
+            <td id="id"> </td>
+            <td id="name"></td>
+            <td id="address"></td>
+            <td id="blood"></td>
+            <td id="condition"></td>
+        </tr>
+
+    </table>
+    <button id="patientChange1" value="0001" onClick="personChange('0001');"> 0001 </button>
+    <button id="patientChange2" value="0002" onClick="personChange('0002');"> 0002 </button>
+    <button id="patientChange3" value="0003" onClick="personChange('0003');"> 0003 </button>
+
+
+<br><br><br><br><br>
+
+    <p id="day"> </p>
+    <table id="recordTable"> 
+        <tr> 
+            <td> BLOOD : </td>
+            <td> BREATH: </td>
+            <td> PAIN: </td>
+            
+
+        </tr>
+
+        <tr>
+            <td id="recordBlood"> </td>
+            <td id="recordBreath"></td>
+            <td id="recordPain"></td>
+        </tr>
+        
+
+    </table>
+
+
+
+
+
+
+    
+<button id="dayChange1" value="Day1" onClick="dayChange('Day1');"> Day1 </button>
+    
+<button id="dayChange2" value="Day2" onClick="dayChange('Day2');"> Day2 </button>
+<button id="dayChange3" value="Day3" onClick="dayChange('Day3');"> Day3 </button>
+
+
+<br><br><br><br><br>
+
+
+<form id="form">
+    Adding to/Edit Record: <br>
+
+    Breath:<input type="text" contenteditable="true" id="breath">
+    Pain:<input type="text" contenteditable="true" id="pain">
+    <button type="button" onClick="sendRecord();">Submit </button>
+</form>
+
+<br><br><br><br><br>
+
+
+<form id="newRecordForm">
+    Creating a new Record
+    <!-- <button type="button" onClick="newRecord();"> New Record </button> -->
+    <button type="button" onClick="createRecord();"> Create Record </button> <a href="newRecord.html"> Enter new Record </a>
+
+    <br><br><br>
+
+    <button type="button" onClick="createPatient()">Create Patient</button>
+    <a href="newPatient.html"> Add Patient Details </a>
+
+</form>
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <script src="patients.js"></script>
+
+
+
+</body>
+</html>
+

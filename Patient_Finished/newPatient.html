@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Patient</title>
+</head>
+<body>
+
+
+
+	<form id="newPatientForm" >
+
+		Name <input type="text" id="Name"> <br>
+		DOB <input type="date" id="DOB"> <br>
+		Address <input type="text" id="Address" > <br>
+		Blood <input type="text" id="Blood"><br>
+		Condition <input type="text" id="Condition"><br>
+		Primary ID <input type="text" id="userId"><br>
+
+		<button type="button" onClick="sendNewPatient(userId)">Add Details </button>
+
+		<a href="patients.html" > Back </a>
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="newPatient.js"> </script>
+
+	</form>
+
+</body>
+</html>

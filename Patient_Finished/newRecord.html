@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Patient</title>
+</head>
+<body>
+
+
+
+	<form id="newPatientForm" >
+
+		Blood Pressure Levels <input type="text" id="BPL"> <br>
+		Date<input type="date" id="DATE"> <br>
+		Day <input type="text" id="Day"><br>
+		Pain levels <input type="text" id="PL" > <br>
+		
+		Primary ID <input type="text" id="userId"><br>
+		Comments : <input type="text" id="Comments"><br>
+
+		<button type="button" onClick="sendNewRecord(Day)">Add Details </button>
+
+		<a href="patients.html" > Back </a>
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="newRecord.js"> </script>
+
+	</form>
+
+</body>
+</html>
