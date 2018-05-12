@@ -1,0 +1,179 @@
+body {
+    background-image:url('../img/addRec.jpg');
+    /* background-position:center; */
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height:100%;
+    background-attachment:fixed;
+}
+
+#container {
+    position:fixed;
+    top: 40%;
+    left: 50%;
+    width:40em;
+    height:40em;
+    margin-top: -20em; /*set to a negative number 1/2 of your height*/
+    margin-left: -25em;
+}
+
+.firstSlide, .secondSlide {
+    width: 900px;
+    height: 750px;
+    font-weight: bold;
+    
+}
+
+.hvr-curl-bottom-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-curl-bottom-right:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    /* IE9 */
+    background: linear-gradient(315deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: width, height;
+    transition-property: width, height;
+  }
+  .hvr-curl-bottom-right:hover:before, .hvr-curl-bottom-right:focus:before, .hvr-curl-bottom-right:active:before {
+    width: 25px;
+    height: 25px;
+  
+  }
+
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+input[type=text]:hover {
+    color: white;
+}
+
+select {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px #330033;
+    background: url("arrow.gif") no-repeat scroll 319px 5px rgb(138, 175, 239);
+}
+
+#timeOfFluid, #typesOfFluid, #outType {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px #330033;
+    background: url("arrow.gif") no-repeat scroll 319px 5px rgba(117, 11, 112, 0.8);
+
+}
+
+#timeOfFluid:hover, #typesOfFluid:hover, #outType:hover { 
+    background-color: rgb(180, 105, 105);
+}
+
+button {
+background:    #20124d;
+background:    -webkit-linear-gradient(#3d85c6, #20124d 50%, #3d85c6);
+background:    linear-gradient(#3d85c6, #20124d 50%, #3d85c6);
+border:        4px solid #556699;
+border-radius: 5px;
+box-shadow:    0 4px #444444;
+padding:       10px 20px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal 700 24px/1 "Calibri", sans-serif;
+text-align:    center;
+text-shadow:   2px 2px #000000;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+
+textarea {
+    min-height: 140px;
+    min-width: 40px; 
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+textarea:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.firstSlide, .secondSlide {
+    justify-content: center;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.back:hover, #go:hover {
+    background: rgba(92, 5, 5, 0.708);
+    border:        4px solid #556699;
+    border-radius: 5px;
+    box-shadow:    0 8px #21036e;
+    padding:       10px 20px;
+}
+
+
+
+.firstSlide {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+.secondSlide {
+    background-color: rgba(117, 11, 112, 0.5);
+    color: white;
+    text-transform: uppercase;
+    /* //background-color: blueviolet; */
+}
+
+input[type="text"]:hover {
+    background-color: rgba(117, 11, 112, 0.5);
+}
+
+.sel:hover {
+
+    background-color: rgb(249, 254, 243);
+
+}
+
+

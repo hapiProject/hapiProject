@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Record</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/addRecord.css">
+</head>
+<body>
+<div id="container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- First slide -->
+        <div id="newRecord"  class="firstSlide">
+            Daily Patient Record:
+              <form id="newPatientForm" >
+                <input type="text" id="userId" placeholder="Primary ID "><br>
+                
+                <!-- Date<input type="date" id="DATE"> <br> -->
+                 <input type="text" id="Day" placeholder="Day"><br>
+                 <input type="text" id="PL" placeholder="Pain levels" > <br>
+                <input type="text" id="temp" placeholder=" Tempature"><br>
+                <input type="text" id="respiratory" placeholder="Respiratory Rate "><br>
+                <input type="text" id="iv" placeholder="IV Check "><br>
+                 <input type="text" id="wound" placeholder="Wound Checked"><br>
+               <input type="text" id="nurseNumber" placeholder=" Nurse Number "><br>
+            
+            
+                INTAKE:<br>
+                Time:<select id="timeOfFluid">
+                  <option value="none">None</option>
+                  <option value="3h">3h</option>
+                  <option value="6h">6h</option>
+                  <option value="12h">12h</option>
+                </select><br><br>
+                Fluid<select id="typesOfFluid">
+                  <option value="none">None</option>
+                  <option value="water">Water</option>
+                  <option value="drip">Drip</option>
+                  <option value="IV">IV</option>
+                </select> <br><br>
+            Type:<select id="outType">
+                  <option value="none">None</option>
+                  <option value="vomit">Vomit</option>
+                  <option value="Urine">Urine</option>
+                  <option value="discharge">Discharge</option>
+                </select><br><br>
+              <textarea id="Comments" placeholder="COMMENTS..."></textarea><br><br><br><br>
+              </div>
+            <!-- <input type="text" id="Comments"> -->
+      </div>
+      <div class="carousel-item">
+        <!-- Second Slide -->
+        <div class="secondSlide">
+        <span style="text-decoration: underline;">Pain System:</span><br>
+        Activity:<br><select id="painActivity" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Respiration:<br><select id="painRespiration" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Circulation:<br><select id="painCirculation" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Conciousness:<br><select id="painConciousness" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Oxygen Saturation:<br><select id="painOxygen" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Dressing:<br><select id="painDressing" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Pain:<br><select id="painPain" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Ambutation:<br><select id="painAmbutation" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Fasting/Feeding:<br><select id="painFastFeed" class="sel"> 
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br>
+        Urine Output:<br><select id="painUrineOutput" class="sel">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+        </select><br><br>
+        <button type='button' onclick="window.location='/patientsMain'" class="back"> Back </button>
+        <button type="button" id="go" onClick="sendNewRecord(Day);" class="hvr-curl-bottom-right">Add Details</button>
+      </form><br><br><br>
+      </div>
+
+        <!-- <img class="d-block w-100" src="..." alt="Third slide"> -->
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="JS/newRecord.js"> </script>
+
+
+
+
+</body>
+</html>

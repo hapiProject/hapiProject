@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meet The Team</title>
+        <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../css/meetTeam.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="JS/meetTeam.js"></script>
+       
+
+    </head>
+    <body class="animated slideInRight">
+<div class="container">
+        <h1><p id="head">HAPI PEOPLE MAKE FOR HAPI USERS</p></h1>
+        <h3 style="text-align: center; color: grey;">Hover over the picture to bring your favourite HAPI members to Life!</h3>
+        <div id="btn" class="hidden">
+        <button class="backBtn" onclick="window.location.href='/Home'">Back</button>
+      </div>
+        <br>
+       
+        <br>
+        
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img src="../img/Eoin.png" onmouseover="this.src='../img/eoinColour.png';" onmouseout="this.src='../img/Eoin.png';" alt="Eoin" style="width:100%">
+              <div class="container">
+                <h2>Eoin ' THE ROCKET DROPLET ' Goslin</h2>
+                <p class="title">DRYING PAINT WATCHER</p>
+                <p>Looking for LinkedIn endorsement and maybe more</p>
+                <p id="eoinp" style="color: rgb(203, 91, 5);"></p>
+                <p><button class="button" onclick="showQuote()">Learn More</button></p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img src="../img/sameSizeDark.png" onmouseover="this.src='../img/sameSize.png';" onmouseout="this.src='../img/sameSizeDark.png';" alt="Alan" style="width:100%">
+              <div class="container">
+                <h2>YOU CAN CALL ME AL</h2>
+                <p class="title">Wanted help once, so made StackOverlfow</p>
+                <p>That thing you want done, I can do it</p>
+                <p id="alp" style="color: rgb(203, 91, 5);"></p>
+                <p><button class="button" onclick="alQuote()">Learn More</button></p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="../img/darkSOB.jpg" onmouseover="this.src='../img/lightSOB.jpg';" onmouseout="this.src='../img/darkSOB.jpg';" alt="SOB" style="width:100%">
+              <div class="container">
+                <h2>MR STEAL YO GIRL (SOB)</h2>
+                <p class="title">FireStarter</p>
+                <p>I play with fire(base) and don't get burnt</p>
+                <p id="sobp" style="color: rgb(203, 91, 5);"></p>
+                <p><button class="button" onclick="sobQuote()">Learn More</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <img src="../img/darkAndrej.png" onmouseover="this.src='../img/lightAndrej.png';" onmouseout="this.src='../img/darkAndrej.png';" alt="Andrej" style="width:100%">
+              <div class="container">
+                <h2> Andrej (port) 3000 </h2>
+                <p class="title">HR Manager</p>
+                <p>Can eat binary numbers in just 7 Bytes</p>
+                <p id="andp"  style="color: rgb(203, 91, 5);"></p>
+                <p><button class="button" onclick="andQuote()">Learn More</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        </body>
+</html>

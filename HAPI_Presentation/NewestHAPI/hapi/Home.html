@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<title>HAPI</title>
+<h1 id="heading"></h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script src="JS/HomePage.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--<link rel="stylesheet"         href="/css/main.css" id="main">-->
+<link rel="stylesheet" href="/css/DocHome.css" id="doctor-styles">
+<!-- <link rel="stylesheet alternative" href="/css/NurseHome.css"  id="nurse-styles"> -->
+
+</head>
+
+<!--
+This a basic home page for functionality only.
+You have to be signed in to access its functions.
+Otherwise you are sent back to the Login page
+
+There is also a sign out button that ends a user's session.
+ <button class= "hvr-rectangle-in hvr-float-shadow " id = "SignOut" onclick="window.location='SignIn'; firebase.auth().signOut();">Sign Out</button>
+-->
+<body>
+   <div id="buttonContainer" style="visibility: hidden;" >
+    <ul class="nav nav-tabs">
+       
+        <li class="nav-item">
+            <button class= "hvr-rectangle-in hvr-float-shadow"id = "patients" onclick="window.location='patientsMain'">Patients</button>
+        </li>
+        <li class="nav-item">
+            <button class= "hvr-rectangle-in hvr-float-shadow"id = "patients" onclick="window.location='meetTeam'">Meet The Team</button>
+        </li>
+        
+        <li class="nav-item">
+            <button class= "hvr-rectangle-in hvr-float-shadow " id = "SignOut" onclick="window.location='SignIn'; firebase.auth().signOut();">Sign Out</button>
+        </li>
+      </ul>
+    </div>
+<div>
+
+<div class="contain">
+
+<h2 id="demo"></h2>
+
+<img src="JS/HomePage.js" height="200px" width="200px"/>
+</div>
+</div>
+   
+
+
+      
+        
+      
+<!-- 
+	<div id="bulk">
+  
+  <p id = "sample">This is a paragraph hello</p>
+  <p id = "welcome">Welcome</p>
+  <p id = "demo"></p>
+  <p id = "demo2"></p>
+  <img src="JS/HomePage.js" height="125px" width="200px"/>
+</div> -->
+<div id="container">
+
+
+<div align="center" style="width: 100px; border: 15px solid black; margin-left: 45%; margin-top: 10%;" class="animated fadeInUp">
+<h1 style="float: left; font-size: 25px" class="animated fadeInDownBig" align="center">H</h1>
+<h1 style="float: left; font-size: 25px" class="animated fadeInLeftBig" align="center">A</h1>
+<h1 style="float: left; font-size: 25px" class="animated fadeInRightBig" align="center">P</h1>
+<h1  style="float: left; font-size: 25px" class="animated fadeInUpBig" align="center">I</h1>
+</div>
+
+
+<div align="center" style="width: 100px; border: 15px solid black; margin-left: 45%; margin-top: 6%;" class="animated fadeInUp">
+  
+  
+</div>
+</div>
+
+
+
+<script>getDetails();</script>
+<script>showimage();</script>
+<script>checkLogin();</script>
+<script>letsgo();</script>
+<script>changeColourScheme();</script>
+
+</div>
+<br>
+<div id = "container">
+<footer class="animated fadeInRightBig">
+        
+  
+  <div class="gallery" style="height: 100px;">
+      <div class="row" style="height: 100px;">
+  <a id="sample2" href="" target="_blank">a</a>
+  <a id="sample3" href="" target="_blank"></a>
+  <a id="sample4" href="" target="_blank"></a>
+  <a  id="sample5" href="" target="_blank"></a>
+  <a  id="sample6" href="" target="_blank"></a>
+  <a  id="sample7" href="" target="_blank"></a>
+  <a  id="sample8" href="" target="_blank"></a>
+  <a  id="sample9" href="" target="_blank"></a>
+  <a  id="sample10" href="" target="_blank"> </a>
+  <a id="sample11" href="" target="_blank"></a>
+  <a  id="sample12" href="" target="_blank"></a>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Add Patient Details</title>
+		<link rel="stylesheet" type="text/css" href="/css/component2.css" />
+		<link rel="stylesheet" type="text/css" href="/css/demo.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="/JS/modernizr-2.6.2.min.js"></script>
+		
+		
+		
+		
+
+
+
+	</head>
+	<body>
+			<script>
+					//This JQuery is used to time the user out after x secs with in-activity/button clicks
+					$(document).click(function(){
+						 if(typeof timeOutObj != "undefined") {
+							 clearTimeout(timeOutObj);
+						 }
+				 
+						 timeOutObj = setTimeout(function(){ 
+							 localStorage.clear();
+							 firebase.auth().signOut();
+							 window.location = "LoginOptions";
+						 }, 100000);   //will expire after twenty minutes
+				 
+					}); 
+				 </script>
+		
+		<div class="container">
+			
+			<!-- The menu/close section -->
+			<div class="component">
+				
+				<!-- The main container, The items inside the menu -->
+				<button class="cn-button menuBtn" id="cn-button">Menu</button>
+				<div class="cn-wrapper" id="cn-wrapper">
+					<ul>
+						<li id="one"><a href="#" onclick="showPersonal()"><span>Personal</span></a></li>
+						
+						<li id="two"><a href="#" onclick="showTreatment()"><span>Treatment</span></a></li>
+						
+						<li id="three"><a href="#" onclick="showContact()"><span>Contact</span></a></li>
+					 </ul>
+				</div>
+				<!-- End of Nav Structure -->
+			</div>
+		
+		</div><!-- /container -->
+		<br><br><br>
+		<div id="personal">
+				<form id="newPatientForm" >
+					<div id= 'pers'>
+				
+					<input type="text" id="name" placeholder="NAME"> <br>
+					Date:<br><input type="Date" id="DOB" placeholder="DOB"> <br>
+					<input type="text" id="address" placeholder="Address" > <br>
+					<input type="text" id="bloodType" placeholder="BloodType"><br>
+					<input type="text" id="condition" placeholder="Condition"><br>
+					<input type="text" id="userId" placeholder="Primary ID "><br>
+					<input type="text" id="age" placeholder="Age"><br>
+					<input type="text" id="gender" placeholder="Gender"><br>
+					<input type="text" id="martial" placeholder="Martial Status "><br>
+					<input type="text" id="occupation" placeholder="Occupation ">
+				
+					</div>
+
+					<div id = "treatment">
+						
+							<input type="text" id="allergies" placeholder="Allergies"><br>
+							<input type="text" id="allergicReaction" placeholder="Allergic Reaction"><br>
+							dateOfPreAssessment:<br><input type="date" id="dateOfPreAssessment" ><br>
+							<input type="text" id="mrsa" placeholder="MRSA"><br>
+							<input type="text" id="nurseName" placeholder="Name of Nurse"><br>
+							<input type="text" id="understandingOfAdmission" placeholder="Admission Understanding"><br>
+							proposedDateOfSurgery:<br><input type="date" id="proposedDateOfSurgery" placeholder="Proposed Date of Surgery"><br>
+							<input type="text" id="proposedSurgery" placeholder="Proposed Surgery"><br>
+							<input type="text" id="recentAdmission" placeholder="Recent Admissions"><br>
+							<br>
+							
+						  </div>
+
+						  <div id="contact">
+						
+						  <input type="text" id="nextOfKinName" placeholder="Next of Kin:"><br>
+						  <input type="text" id="nextOfKinPhone" placeholder="Next of Kin phone:"><br>
+						 <input type="text" id="nextOfKinAddress" placeholder=" Next of Kin Address:"><br>
+						 <input type="text" id="nextOfKinRelationship" placeholder=" Next of kin Relationship:"><br>
+						  <input type="text" id="nextOfKinEmail" placeholder="Next of kin Email:"><br>
+						 <input type="text" id="PHN" placeholder=" PHN:"><br>
+						 <input type="text" id="gpName" placeholder = "GP Name:"><br>
+						  <input type="text" id="gpAddress" placeholder="GP Address:"><br>
+						  <input type="text" id="medicalCard" placeholder="Medical Card"><br>
+						  <input type="text" id="surgeryPhone" placeholder="Surgery Phone"><br>
+						  <button type="button" class="subButton" onclick="window.location='/patientsMain'">Back</button>
+						  <button type="button" class="subButton" onClick="sendNewPatient(userId)">Add Details</button>
+
+						</form>
+					  
+						</div>
+
+					</div>
+					
+					
+
+ 					 </form>
+
+					
+		
+
+<footer id="footer">
+	</footer> 
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script src="JS/newPatient.js"> </script>
+		<script src="/JS/slideNewPatient.js"></script>
+		<script src="/JS/polyfills.js"></script>
+		<script src="/JS/demo2.js"></script>
+	</body>
+</html>

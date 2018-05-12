@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/patientsHome.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>  
+
+
+</head>
+    <body class ="animate-in" onload="styleRecords()">
+     
+<div id='all'>
+
+
+ <div class="pimg1">
+    <div class="ptext">
+
+      <p class = "introText">
+      Patient
+     </p>
+    <span class="border">
+        <header><h1>  Records </h1></header>
+        <h3 id="pat">Patient ID:</h3>
+  <div name="newStuff" id="newStuff" style='font-size: 50%' > </div>
+    
+    <table id="patientTable" style='font-size: 45%; font-weight: bold;' style='width:100%'> 
+        <tr> 
+            <td> ID : </td>
+            <td> NAME: </td>
+            <td> ADDRESS: </td>
+            <td> BLOOD:  </td>
+            <td> CONDITION: </td>
+        </tr>
+        <tr>
+            <td id="id"> </td>
+            <td id="name"></td>
+            <td id="address"></td>
+            <td id="blood"></td>
+            <td id="condition"></td>
+        </tr>
+    </table>
+
+
+
+  <!--   <div id='daysDiv'>
+
+    </div> -->
+   <!--  <button id="patientChange1" value="0001" onClick="personChange('0001');"> 0001 </button>
+    <button id="patientChange2" value="0002" onClick="personChange('0002');"> 0002 </button>
+    <button id="patientChange3" value="0003" onClick="personChange('0003');"> 0003 </button>
+     -->
+     <!-- div name="newStuff" id="newStuff" > </div> -->
+
+
+
+
+
+<br><br>
+<div id='daysDiv' style="font-weight: bold; font-size: 45%;">
+
+    </div>
+    <p id="day"> </p>
+    <table id="dayTable" style='font-size: 45%; font-weight: bold;'> 
+        <tr> 
+            <td> DATE : </td>
+            <td> TEMP: </td>
+            <td> PAIN: </td>
+            <td> NURSE: </td>  
+            <td> CHECK: </td>
+            <td> LAST PS </td>
+        </tr>
+        <tr>
+            <td id="recordDate"> </td><br>
+            <td id="recordTemp"></td>
+            <td id="recordPain"></td>
+            <td id="recordNurse"></td>
+            <td id="recordCheck"></td>
+            <td id="recordPS"></td>
+        </tr>     
+    </table>
+
+
+ <div id='newRecords'>
+    <form id="newRecordForm">
+   
+    <!-- <button type="button" onClick="newRecord();"> New Record </button> -->
+
+    <button id="basestyle" class="animated slideInUp newRecButton hvr-underline-from-center "type="button" onClick="createRecord();"> Create Record </button>
+     <button id="basestyle" type="button" class="animated slideInUp newRecButton hvr-underline-from-center " onclick="window.location='/newRecord'">Add Record Details</button><br>
+  <!--   <br> <a href="newRecord.html"> <p style='font-size: 70%'>Enter new Record</p> </a> -->
+    
+    <button id="basestyle" class="animated bounceInLeft hvr-underline-from-center" type="button" onClick="createPatient()">Create Patient</button>
+     <button id="basestyle" class="animated bounceInRight hvr-underline-from-center"type="button" onClick="window.location='/NewPatientNew'">Add Patient Details</button><br>
+
+
+
+ <!--    <a href="newPatient.html"> <p style='font-size: 70%'>Add Patient Details</p> </a> -->
+
+   <button id="basestyle" class="animated bounceInLeft hvr-underline-from-center" type='button' name='emailData' onClick='location.href="/Email"'> Email N.O.K </button>
+    <button id="basestyle"class="animated bounceInRight hvr-underline-from-center"type='button' name='phoneData' onClick='location.href="/textMessage"'> Text N.O.K</button>
+    <!-- location.href="/textMessage -->
+    <!--  -->
+    <button id="basestyle" class="animated bounceinLeft hvr-underline-from-center" type='button' onclick="window.location='/Home'"> Home </button>
+
+
+</form>
+</div>
+
+
+    </div>
+  </div>
+  <!-- <section class="section section-light">
+    <h2>Patients</h2>
+    <p>
+    </p>
+  </section> -->
+ <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="/JS/patients.js"></script>
+<script type="text/javascript" src="/JS/textMessage.js"></script>
+<script type="text/javascript" src="/JS/storeNumber.js"></script>
+
+</div>
+</body>
+</html>
